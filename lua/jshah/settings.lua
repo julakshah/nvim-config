@@ -19,3 +19,6 @@ o.showmatch = false -- Shows the matching bracket and phase cursor there for a m
 o.termguicolors = true -- Enables support for RGB colors
 o.encoding = "UTF-8"
 o.hidden = true -- Allow hidden buffers for toggleterm
+
+-- Preferences
+

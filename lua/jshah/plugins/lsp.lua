@@ -22,7 +22,8 @@ return {
     -- setup conform
     require("conform").setup({
       formatters_by_ft = {
-        python = { "black", "prettier" }, -- for softdes requirements
+        python = { "black" },
+        markdown = { "prettier" },
       },
     })
     vim.api.nvim_create_autocmd("BufWritePre", {
@@ -44,11 +45,12 @@ return {
     require("fidget").setup({})
     require("mason").setup()
     require("mason-lspconfig").setup({
-      ensure_installed = {
+      ensure_installed = { -- Find available lsp packages: https://mason-registry.dev/registry/list
         "lua_ls",
         "clangd",
         "rust_analyzer",
         "jdtls",
+        "marksman",
       },
       handlers = {
         function(server_name) -- default handler
@@ -94,5 +96,8 @@ return {
         prefix = "",
       },
     })
+   -- Show line diagnostics automatically when hovering
+   vim.o.updatetime = 250
+   vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
   end
 }
