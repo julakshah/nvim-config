@@ -5,7 +5,7 @@ vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
 -- Window splitting
 vim.keymap.set("n", "<leader>o", ":vsplit<CR>")
-vim.keymap.set("n", "<leader>o", ":split<CR>")
+vim.keymap.set("n", "<leader>i", ":split<CR>")
 -- Window navigation
 vim.keymap.set("n", "<leader>h>", "<:C-w>h<CR>")
 vim.keymap.set("n", "<leader>l", "<:C-w>l<CR>")
