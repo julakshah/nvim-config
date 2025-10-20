@@ -3,7 +3,7 @@ return   {
   version = "*", -- if things go wrong specify version in future
   config = function()
     require("toggleterm").setup{
-      open_mapping = [[<leader>\]],
+      open_mapping = [[<C-\>]],
     }
   end
 }
