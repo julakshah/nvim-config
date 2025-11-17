@@ -24,6 +24,12 @@ return {
       formatters_by_ft = {
         python = { "black" },
         markdown = { "prettier" },
+        c = { "clang-format" },
+        cpp = { "clang-format" },
+        javascript = { "prettier" },
+        javascriptreact = { "prettier" },
+        html = { "prettier" },
+        css = { "prettier" },
       },
     })
     vim.api.nvim_create_autocmd("BufWritePre", {
@@ -99,5 +105,6 @@ return {
    -- Show line diagnostics automatically when hovering
    vim.o.updatetime = 250
    vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
   end
 }
